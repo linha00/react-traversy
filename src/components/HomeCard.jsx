@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HomeCard = ({
   theme = "primary",
@@ -28,12 +29,12 @@ const HomeCard = ({
     <div className={`${currentTheme.bg2} p-6 rounded-lg shadow-md`}>
       <h2 className="text-2xl font-bold">{title}</h2>
       <p className="mt-2 mb-4">{text}</p>
-      <a
-        href="/jobs"
+      <Link
+        to="/jobs"
         className={`inline-block text-white rounded-lg px-4 py-2 ${currentTheme.bg} ${currentTheme.hover}`}
       >
         {buttonText}
-      </a>
+      </Link>
     </div>
   );
 };
